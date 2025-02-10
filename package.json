@@ -1,0 +1,30 @@
+{
+	"name": "@qompa/cci-utils",
+	"version": "0.1.0",
+	"description": "Utilities to convert between CCI and account numbers",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"type": "module",
+	"files": ["dist"],
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"require": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"scripts": {
+		"build": "tsc",
+		"prepublishOnly": "npm run build"
+	},
+	"keywords": ["utilities", "peru", "banking", "finance", "cci", "typescript"],
+	"author": "Luis Quiñones Requelme",
+	"license": "MIT",
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"devDependencies": {
+		"typescript": "^5.0.0"
+	}
+}
