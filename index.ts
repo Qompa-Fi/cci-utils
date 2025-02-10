@@ -3,7 +3,7 @@ enum BankCode {
 	BBVA = "011",
 }
 
-enum BCPAccountTypes {
+export enum BCPAccountTypes {
 	Savings = "1",
 	Checking = "2",
 	CTS = "3",
@@ -77,7 +77,9 @@ function calculateSecondBBVACheckDigit(
 	return ((10 - (sum % 10)) % 10).toString();
 }
 
-export function convertBBVAAccountNumberToCCI(accountNumber: string): string | null {
+export function convertBBVAAccountNumberToCCI(
+	accountNumber: string,
+): string | null {
 	if (!/^\d{18}$/.test(accountNumber) && !/^\d{20}$/.test(accountNumber)) {
 		return null;
 	}
